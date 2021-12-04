@@ -50,10 +50,6 @@ console.log(empDailyWageMap);
 let empWage = calcDailyWage(totalEmpHrs);
 console.log("Total Days: "+totalWorkingDays+" Total Hours: "+totalEmpHrs+" Emp Wage: " + empWage);
 
-function totalWages(totalWage, dailyWage)
-{
-    return totalWage + dailyWage;
-}
 // Array Helper Functions
 // UC 7A - Calc total Wage using Array forEach traversal or reduce method
 function sum(dailyWage)
@@ -62,7 +58,10 @@ function sum(dailyWage)
 }
 empDailyWageArr.forEach(sum);
 console.log("UC 7A - Total Days: "+totalWorkingDays+" Total Hours: "+totalEmpHrs+" Emp Wage: " + empWage);
-
+function totalWages(totalWage, dailyWage)
+{
+    return totalWage + dailyWage;
+}
 console.log("UC 7A - Emp Wage Using Reduce: "+empDailyWageArr.reduce(totalWages, 0));
 
 // UC 7B - Show the Day along with Daily Wage Using Array Map helper function
@@ -119,5 +118,5 @@ console.log("UC 7G - Number of Days Employee Worked: "+
             empDailyWageArr.reduce(totalDaysWorked, 0));
 
 //UC 8
-console.log("UC 8 - Emp Wage Map Total Hours: "+
+console.log("UC 8 - Emp Wage Map Total"+
             Array.from(empDailyWageMap.values()).reduce(totalWages, 0));
