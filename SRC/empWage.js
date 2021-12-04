@@ -118,5 +118,5 @@ console.log("UC 7G - Number of Days Employee Worked: "+
             empDailyWageArr.reduce(totalDaysWorked, 0));
 
 //UC 8
-console.log("UC 8 - Emp Wage Map Total"+
+console.log("UC 8 - Emp Wage Map Total: "+
             Array.from(empDailyWageMap.values()).reduce(totalWages, 0));
